@@ -1,0 +1,3 @@
+Solo se debe ejecutar 
+
+la varible numero es el valor que se debe cambiar

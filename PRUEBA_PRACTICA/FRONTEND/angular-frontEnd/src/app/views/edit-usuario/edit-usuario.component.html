@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="container">
+    <h3>Editar usuario</h3>
+    <form [formGroup]="usuarioForm" (ngSubmit)="onEditarUsuario(usuarioForm.value)">
+        <div class="row">
+            <input type="hidden" class="form-control" formControlName="id"[readonly]="true">
+          <div class="col">            
+            <input type="text" class="form-control" placeholder="Nombres" formControlName="nombres">
+          </div>
+          <div class="col">            
+            <input type="text" class="form-control" placeholder="Contrasena" formControlName="contrasena">
+          </div>            
+          
+            <input type="hidden" class="form-control" placeholder="Correo" formControlName="correo">
+  
+        </div>
+        <br>
+        <div class="row">
+            <div class="col"> 
+                <select name="areaestudio" formControlName="areaestudio" class="form-control" placeholder="Area estudio" >
+                    <option [value]="item" *ngFor="let item of lista" >{{item}}</option>
+                </select>           
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="especialidad" formControlName="especialidad" ngModel maxlength="100">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+                <select name="nivelacademico" formControlName="nivelacademico" class="form-control" placeholder="Nivel academico" >
+                    <option [value]="item" *ngFor="let item of listaNivelAcademico" >{{item}}</option>
+                </select>                               
+            </div>
+            <div class="col">
+                <select name="motivoregistro" formControlName="motivoregistro" class="form-control" placeholder="Nivel academico" >
+                    <option [value]="item" *ngFor="let item of lista1" >{{item}}</option>
+                </select>         
+              </div>             
+            <div class="col">            
+              <select name="tipousuario" hidden formControlName="tipousuario" ng-model="tipousuario" class="form-control" placeholder="Tipo usuario" >
+                <option [value]="item" *ngFor="let item of listaTipoUsuario" > {{item}}</option>
+            </select>                
+            </div>  
+            <div class="col">
+                <input type="submit" class="form-control btn btn-primary" value="Guardar Cambios" >
+              </div>                     
+          </div> 
+                
+      </form>
+</div>
+<app-footer></app-footer>

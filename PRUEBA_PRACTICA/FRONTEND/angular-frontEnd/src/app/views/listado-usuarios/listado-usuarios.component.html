@@ -1,0 +1,27 @@
+<app-header></app-header>
+    <div class="container">
+        <h3>Profesores disponibles</h3>
+        <table id="example" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Nombres</th>
+                    <th>Area de estudio</th>
+                    <th>Especialidad</th>
+                    <th>Motivo registro</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let UsuarioI of UsuarioI">
+                    <td>{{UsuarioI.nombres}}</td>
+                    <td>{{UsuarioI.areaestudio}}</td>
+                    <td>{{UsuarioI.especialidad}}</td>
+                    <td>{{UsuarioI.motivoregistro}}</td>
+                    <td>
+                        <a class="btn btn-secondary btn-sm" (click)="goEditarUsuario(UsuarioI.id)">edit</a>
+                    </td>                    
+                </tr>
+                </tbody>
+        </table>
+    </div>
+<app-footer></app-footer>

@@ -1,0 +1,9 @@
+El proyecto esta desarrollado en Spring boot
+
+1.- Tiene dos controladores uno que se encarga del logeo y otro de hacer el crud(operaciones)
+2.- Esta conectado a la base de datos MYSQL
+3.- La configuracion para levantar el proyecto es agregar en la configuracion 
+	PROYECTO MAVEN
+	Y EN COMMAND LINE => spring-boot:run
+
+

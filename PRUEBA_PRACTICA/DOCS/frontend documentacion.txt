@@ -1,0 +1,5 @@
+El front esta desarrollado en Angular
+
+1.- Para su ejecucion solo se debe ejecutar
+	npm install	
+	ng serve
